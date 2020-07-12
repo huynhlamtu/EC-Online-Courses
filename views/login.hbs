@@ -1,0 +1,42 @@
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Sign in</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Sign in</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<div id="login-box">
+  <div class="left">
+    <h1>Sign in</h1>
+    <form action = "/users/login" id = "usersLogin" method = "post">
+    <input type="email" id = "email" name="email" placeholder="E-mail" />
+    <input type="password" id = "password" name="password" placeholder="Password" />
+    <div class="checkboxy">
+      <input name="keepLoggedIn" id="keepLoggedIn" value="1" type="checkbox" /><label for="keepLoggedIn"><label> </label> Keep me log in</label>
+    </div>
+    {{#if message}}
+      <div class = "col-md-12 form-group alert {{type}}">
+        <span> {{message}} </span>
+      </div>
+    {{/if}}
+    <input type="submit" name="signup_submit" value="Log in" />
+    </form>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin google">Log in with Google</button>
+  </div>
+  <div class="or">OR</div>
+</div>

@@ -2,13 +2,13 @@
         <div id="slides-shop" class="cover-slides">
             <ul class="slides-container">
                 <li class="text-center">
-                    <img src="images/banner-01.jpg" alt="">
+                    <img src="images/banner-01.png" alt="">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                                <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                                <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                                <h1 class="m-b-20"><strong>Welcome To <br> 20A04 Courses shop</strong></h1>
+                                <p class="m-b-40">Courses for anyone, anywhere.</p>
+                                <p><a class="btn hvr-hover" href="products">Shop Now</a></p>
                             </div>
                         </div>
                     </div>
@@ -18,21 +18,21 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                                <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                                <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                                <h1 class="m-b-20"><strong>Welcome To <br> HCMUS EC 20A04 team</strong></h1>
+                                <p class="m-b-40">With our courses, you can improve your skills.</p>
+                                <p><a class="btn hvr-hover" href="products">Shop Now</a></p>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="text-center">
-                    <img src="images/banner-03.jpg" alt="">
+                    <img src="images/banner-03.png" alt="">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
-                                <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
-                                <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                                <h1 class="m-b-20"><strong>Our EC project</strong></h1>
+                                <p class="m-b-40">Lecturer: Luong Vi Minh</p>
+                                <p><a class="btn hvr-hover" href="products">Shop Now</a></p>
                             </div>
                         </div>
                     </div>
@@ -45,69 +45,315 @@
         </div>
         <!-- End Slider -->
 
-        <!-- Start Categories  -->
-        <div class="categories-shop">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="shop-cat-box">
-                            <img class="img-fluid" src="images/categories_img_01.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="shop-cat-box">
-                            <img class="img-fluid" src="images/categories_img_02.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="shop-cat-box">
-                            <img class="img-fluid" src="images/categories_img_03.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+     {{!-- Start Categories --}}
+<div class="container">
+                <div style="margin-top: 60px;" class="row">
+                    <div class="col-lg-12">
+                        <div class="title-all text-center">
+                            <h1>Categories</h1>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- End Categories -->
-        
-        <div class="box-add-products">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="offer-box-products">
-                            <img class="img-fluid" src="images/add-img-01.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="offer-box-products">
-                            <img class="img-fluid" src="images/add-img-02.jpg" alt="" />
-                        </div>
-                    </div>
+                <div class="row special-list">
+                    {{#each categories}}
+                        <div class="col-lg-3 col-md-6 special-grid best-seller">
+                            <div class="categories-side fix">
+                                <div class="box-img-hover">
+                                    <a href="/products"><img src="{{ imagepath }}" class="img-fluid" alt="Image"></a>
+                                </div>
+                                <div class="why-text">
+                                    <a href="/products"><h5 style="background: none; color: black">{{name}}</h5></a>
+                                    <h6>{{summary}}</h6>
+                                </div>
+                            </div>
+                        </div>               
+                    {{/each}}
                 </div>
-            </div>
-        </div>
+    </div> 
+ {{!-- End Categories --}}
 
-        <!-- Start Products  -->
+        <!-- Start Popular Products  -->
+    <div class="products-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-all text-center">
+                            <h1>Popular Courses</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row special-list">
+                    {{#each trendingProducts}}
+                        <div class="col-lg-3 col-md-6 special-grid best-seller">
+                            <div class="products-single fix">
+                                <div class="box-img-hover">
+                                    <div class="type-lb">
+                                        <p class="{{status}}">{{status}}</p>
+                                    </div>
+                                    <img src="{{ imagepath }}" class="img-fluid" alt="Image">
+                                    <div class="mask-icon">
+                                        <ul>
+                                            <li><a href="/products?category={{id}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                        </ul>
+                                        <a class="cart" href="#">Add to Cart</a>
+                                    </div>
+                                </div>
+                                <div class="why-text">
+                                    <h6> {{Category.name}}</style></h6>
+                                    <h5 style="background: none; color: black">{{name}}</h5>
+                                    <h6>{{price}}₫</h6>
+                                </div>
+                            </div>
+                        </div>               
+                    {{/each}}
+                </div>     
+            </div>
+    </div>
+        <!-- End Popular Products  -->
+    
+</div>
+
+     {{!-- <!-- Start Categories  -->
+    <div class="category-side">
+    {{#each categories}}
+            <div style="background-image:url('{{imagepath}}');" class="categories">
+                <div class="ptext">
+                    <span class="border trans">
+                        <a id="course-link" href="/shop">{{name}}</a>
+                    </span>
+                </div>
+            </div>
+            <section class="section section-dark">
+                <p>{{summary}}</p>
+            </section>
+    {{/each}}
+    </div> --}}
+    <!-- End Categories  -->
+
+<!-- Start Products  -->
+
+{{!-- 
         <div class="products-box">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="title-all text-center">
-                            <h1>Fruits & Vegetables</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                            <h1>Web Development</h1>
+                            <p>Master the laguages of the web.</p>
                         </div>
                     </div>
                 </div>
+                
+                <div class="row special-list">
+                    <div class="col-lg-3 col-md-6 special-grid best-seller">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Web Development/htmlcss-logo.png" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>HTML/CSS</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Web Development/javascript-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>JAVASCRIPT</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid best-seller">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="hot">Hot</p>
+                                </div>
+                                <img src="images/Courses/Web Development/react-logo.png" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>REACTJS</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid best-seller">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="new">New</p>
+                                </div>
+                                <img src="images/Courses/Web Development/angular-logo.png" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>Angular</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End Products  -->
+
+<!-- Start Products  -->
+        <div class="products-box">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="special-menu text-center">
-                            <div class="button-group filter-button-group">
-                                <button class="active" data-filter="*">All</button>
-                                <button data-filter=".top-featured">Top featured</button>
-                                <button data-filter=".best-seller">Best seller</button>
+                        <div class="title-all text-center">
+                            <h1>Programming and Computer Science</h1>
+                            <p>Learn Python, one of hottest and fastest growing programming languages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row special-list">
+                    <div class="col-lg-3 col-md-6 special-grid best-seller">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="hot">Hot</p>
+                                </div>
+                                <img src="images/Courses/Programming and Computer Science/python-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
                             </div>
+                            <div class="why-text">
+                                <h4>PYTHON</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="new">New</p>
+                                </div>
+                                <img src="images/Courses/Programming and Computer Science/cmd-line-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>CMD LINE</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="new">New</p>
+                                </div>
+                                <img src="images/Courses/Programming and Computer Science/php-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>PHP</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Programming and Computer Science/Cplusplus-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>C++</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Programming and Computer Science/C-logo.jpg" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>C Programming</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End Products  -->
+
+<!-- Start Products  -->
+        <div class="products-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-all text-center">
+                            <h1>Data Science</h1>
+                            <p>Learn SQL and Python and build the skills you need to analyze data.</p>
                         </div>
                     </div>
                 </div>
@@ -119,42 +365,16 @@
                                 <div class="type-lb">
                                     <p class="sale">Sale</p>
                                 </div>
-                                <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                                <img src="images/Courses/Data Science/sql-logo.png" class="img-fluid" alt="Image">
                                 <div class="mask-icon">
                                     <ul>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
                                     <a class="cart" href="#">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <h5> $7.79</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 special-grid top-featured">
-                        <div class="products-single fix">
-                            <div class="box-img-hover">
-                                <div class="type-lb">
-                                    <p class="new">New</p>
-                                </div>
-                                <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
-                                <div class="mask-icon">
-                                    <ul>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    </ul>
-                                    <a class="cart" href="#">Add to Cart</a>
-                                </div>
-                            </div>
-                            <div class="why-text">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <h5> $9.79</h5>
+                                <h4>SQL</h4>
                             </div>
                         </div>
                     </div>
@@ -165,19 +385,56 @@
                                 <div class="type-lb">
                                     <p class="sale">Sale</p>
                                 </div>
-                                <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                                <img src="images/Courses/Data Science/csharp-logo.jpg" class="img-fluid" alt="Image">
                                 <div class="mask-icon">
                                     <ul>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
                                     <a class="cart" href="#">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <h5> $10.79</h5>
+                                <h4>C#</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Data Science/java-logo.png" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>Java</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 special-grid top-featured">
+                        <div class="products-single fix">
+                            <div class="box-img-hover">
+                                <div class="type-lb">
+                                    <p class="sale">Sale</p>
+                                </div>
+                                <img src="images/Courses/Data Science/mysql-logo.png" class="img-fluid" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    </ul>
+                                    <a class="cart" href="#">Add to Cart</a>
+                                </div>
+                            </div>
+                            <div class="why-text">
+                                <h4>MYSQL</h4>
                             </div>
                         </div>
                     </div>
@@ -186,96 +443,22 @@
                         <div class="products-single fix">
                             <div class="box-img-hover">
                                 <div class="type-lb">
-                                    <p class="sale">Sale</p>
+                                    <p class="new">New</p>
                                 </div>
-                                <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                                <img src="images/Courses/Data Science/machine-learning-logo.jpg" class="img-fluid" alt="Image">
                                 <div class="mask-icon">
                                     <ul>
                                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                     </ul>
                                     <a class="cart" href="#">Add to Cart</a>
                                 </div>
                             </div>
                             <div class="why-text">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <h5> $15.79</h5>
+                                <h4>Machine Learning</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Products  -->
-
-        <!-- Start Blog  -->
-        <div class="latest-blog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title-all text-center">
-                            <h1>latest blog</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 col-xl-4">
-                        <div class="blog-box">
-                            <div class="blog-img">
-                                <img class="img-fluid" src="images/blog-img.jpg" alt="" />
-                            </div>
-                            <div class="blog-content">
-                                <div class="title-blog">
-                                    <h3>Fusce in augue non nisi fringilla</h3>
-                                    <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
-                                </div>
-                                <ul class="option-blog">
-                                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-4">
-                        <div class="blog-box">
-                            <div class="blog-img">
-                                <img class="img-fluid" src="images/blog-img-01.jpg" alt="" />
-                            </div>
-                            <div class="blog-content">
-                                <div class="title-blog">
-                                    <h3>Fusce in augue non nisi fringilla</h3>
-                                    <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
-                                </div>
-                                <ul class="option-blog">
-                                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-4">
-                        <div class="blog-box">
-                            <div class="blog-img">
-                                <img class="img-fluid" src="images/blog-img-02.jpg" alt="" />
-                            </div>
-                            <div class="blog-content">
-                                <div class="title-blog">
-                                    <h3>Fusce in augue non nisi fringilla</h3>
-                                    <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
-                                </div>
-                                <ul class="option-blog">
-                                    <li><a href="#"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Blog  -->
+<!-- End Products  --> --}}
