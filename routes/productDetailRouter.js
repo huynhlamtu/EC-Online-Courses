@@ -11,10 +11,11 @@ router.get('/:id', (req, res, next) => {
         .getById(req.params.id)
         .then(result => {
             res.locals.product = result;
-            console.log(result.Comments[0].dataValues.User);
+            // console.log(result.Comments[0].dataValues.User);
             res.render('shop-detail');
         })
         .catch(error => next(error));
 });
+
 
 module.exports = router;

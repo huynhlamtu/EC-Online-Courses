@@ -12,9 +12,13 @@
                                 
                                 {{#if isLoggedIn}}
                                 <li><a href="../my-account.hbs"><i class="fa fa-user s_color"></i> {{email}}</a></li>
+                                {{#if isAdmin}}
+                                    <li><a href="/admin"> Admin section</a></li>
+                                {{/if}}
                                 <li><a href="/"><i class="fa fa-home fa-lg"></i> Home</a></li>
                                 <li><a href="/contact-us"><i class="fas fa-headset"></i> Contact Us</a></li>
                                 <li><a href="/users/logout">Log out</a></li>
+                                
                                 {{else}}
                                 <li><a href="/"><i class="fa fa-home fa-lg"></i> Home</a></li>
                                 <li><a href="/contact-us"><i class="fas fa-headset"></i> Contact Us</a></li>
@@ -104,7 +108,7 @@
                             <li class="side-menu">
                                 <a href="/cart">
                                     <i class="fa fa-shopping-bag"></i>
-                                    <span class="badge">3</span>
+                                   <span class="badge" id="cart-badge">{{totalQuantity}}</span>
                                     <p>My Courses</p>
                                 </a>
                             </li>

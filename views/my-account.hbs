@@ -21,7 +21,8 @@
                 <div class="row">
                     <div>
                         <div>
-                            <p> <img src="images/img-1.jpg" alt="Picture Account">
+                            {{!-- <p> <img src="images/img-1.jpg" alt="Picture Account"> --}}
+                             <p> <img src="images/{{avartarPath}}" alt="Picture Account">
                             </p>
                         
                             <div class="Title">
@@ -30,7 +31,8 @@
                         </div>
                         <p>{{email}}</p>
                         <p>{{phone}}</p>
-                        <input type="submit" name="edit profile" value="Edit Profile " />
+                        {{!-- <input type="submit" name="edit profile" value="Edit Profile " /> --}}
+                        <a href="./editAccount.hbs" class="button" type="submit">Edit Profile</a>
                     </div>
 
                     {{!-- <div class="col-lg-4 col-md-12">

@@ -20,4 +20,9 @@ controller.comparePassword = (password, hash) => {
     return bcrypt.compareSync(password, hash);
 };
 
+controller.editUser = (user) => {
+    const salt = bcrypt.genSaltSync(10);
+    user.password = bcrypt.hashSync(user.password, salt);
+    return User.editUser(user);
+}
 module.exports = controller;

@@ -1,0 +1,111 @@
+        <div class="breadcrumbs">
+            <div class="breadcrumbs-inner">
+                <div class="row m-0">
+                    <div class="col-sm-4">
+                        <div class="page-header float-left">
+                            <div class="page-title">
+                                <h1>Dashboard</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="page-header float-right">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="/admin">Dashboard</a></li>
+                                    <li><a href="/tableProducts">Thống kê khóa học</a></li>
+                                {{#with product}}
+                                    <li class="active">{{name}}</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Thông tin hóa đơn: <span style="color: crimson;">{{name}}</span></strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                    <tbody>
+                                            <tr>
+                                                <th style="color:darkblue;">Id</th>                                                
+                                                <th>{{id}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Name</th>
+                                                <th>{{name}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Category</th>
+                                                <th>{{Category.name}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Price</th>
+                                                <th>{{price}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Imagepath</th>
+                                                <th>{{imagepath}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Videopath</th>
+                                                <th>{{videopath}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Status</th>
+                                                <th>{{status}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Summary</th>
+                                                <th>{{summary}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Description</th>
+                                                <th>{{description}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Require Knowlegde</th>
+                                                <th>
+                                                    {{#each Requires}}
+                                                    <p style="font-weight:bold; color: black">- {{description}}</p>
+                                                    {{/each}}
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Provided Knowlegde</th> 
+                                                <th>
+                                                    {{#each Knowledges}}
+                                                    <p style="font-weight:bold; color: black">- {{description}}</p>
+                                                    {{/each}}
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Sold</th>
+                                                <th>{{sold}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Total Reviews</th>
+                                                <th>{{reviewCount}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:darkblue;">Rating</th>
+                                                <th>{{overallReview}}</th>
+                                            </tr>
+                                        {{/with}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->

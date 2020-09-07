@@ -1,0 +1,37 @@
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Edit Profile</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Edit Profile</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+<div id="login-box">
+ 
+    <h1>Change Your Information</h1>
+    <form action="/users/editAccount" id="edit_form" method="post">
+      <input type="email" id="email" name="email" placeholder="E-mail">
+      <input type="text" id="username" name="username" placeholder="New Username ">
+      <input type="text" id="fullname" name="fullname" placeholder="New Fullname ">
+      <input type="password" id="password" name="password" placeholder="New Password">
+      <input type="password" id="password2" name="password2" placeholder="Retype password">
+      
+      {{#if message}}
+      <div class = "col-md-12 form-group alert {{type}}">
+        <span> {{message}} </span>
+      </div>
+      {{/if}}
+
+      <input type="submit" name="signup_submit" value="submit">
+    </form>
+
+ 
+</div>
